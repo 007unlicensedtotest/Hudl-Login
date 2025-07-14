@@ -1,0 +1,54 @@
+# Test data for Hudl login testing scenarios
+
+# Valid user credentials
+valid_credentials:
+  email: ***REMOVED***
+  password: ***REMOVED***
+  display_name: ***REMOVED***
+
+# Invalid credentials for negative testing
+invalid_credentials:
+  email: invalid.user@example.com
+  password: WrongPassword
+
+# Account creation test data
+account_creation:
+  valid_registration:
+    first_name: "John"
+    last_name: "Doe"
+    full_name: "John Doe"
+    email: "john.doe@testuser.com"
+    password: "SecurePass123!"
+    confirm_password: "SecurePass123!"
+    organization: "Test High School"
+    team_name: "Test Team"
+    role: "Coach"
+    sport: "Football"
+    accept_terms: true
+    accept_privacy: true
+    opt_in_newsletter: false
+  
+  invalid_registration:
+    first_name: ""
+    last_name: ""
+    email: "invalid-email"
+    password: "weak"
+    confirm_password: "different"
+    organization: ""
+    team_name: ""
+
+# Error messages for validation testing
+expected_error_messages:
+  invalid_email: "Incorrect username or password."
+  invalid_password: "Your email or password is incorrect. Try again."
+  invalid_email_format: "Enter a valid email."
+  
+  # Account creation error messages
+  account_creation_errors:
+    required_first_name: "First name is required."
+    required_last_name: "Last name is required."
+    invalid_email_format: "Please enter a valid email address."
+    password_too_weak: "Password must be at least 8 characters long."
+    password_mismatch: "Passwords do not match."
+    terms_required: "You must accept the terms and conditions."
+    email_already_exists: "An account with this email already exists."

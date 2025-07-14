@@ -1,0 +1,36 @@
+# Test configuration for Hudl login testing
+browser:
+  name: chrome  # chrome, firefox, edge, safari
+  headless: false
+  window_size:
+    width: 1920
+    height: 1080
+
+timeouts:
+  implicit_wait: 10
+  explicit_wait: 20
+  page_load_timeout: 30
+  error_detection: 3
+  social_login: 2
+
+urls:
+  base_url: https://www.hudl.com/
+  login_url: https://www.hudl.com/login
+
+paths:
+  base_url_path: /  # Base path for the application
+  login_path: /login  # Path for the login page
+  reset_password_path: /reset-password  # Path for password reset
+  signup_path: /signup  # Path for signup page
+  dashboard_path: /home  # Path for user dashboard
+
+  
+reporting:
+  screenshot_on_failure: true
+  save_page_source_on_failure: true
+  html_report_dir: reports/html
+
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: reports/test.log
