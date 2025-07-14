@@ -2,9 +2,9 @@
 
 # Valid user credentials
 valid_credentials:
-  email: ***REMOVED***
-  password: ***REMOVED***
-  display_name: ***REMOVED***
+  email: addyourvalidpasswordhere
+  password: addyourvalidpasswordhere
+  display_name: addyourdisplaynamehere
 
 # Invalid credentials for negative testing
 invalid_credentials:
